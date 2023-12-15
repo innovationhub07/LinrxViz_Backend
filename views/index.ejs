@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600&family=Raleway:wght@300&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: #f5f5f5;
+            text-align: center;
+        }
+
+        h1 {
+            background-color: #205E61;
+            color: #fff;
+            font-family: 'Open Sans', sans-serif;
+            padding: 10px;
+        }
+        h3{
+            font-size: 27px;
+            color: #205E61;
+        }
+
+        form {
+            text-align: left;
+            background-color: #fff;
+            max-width: 300px;
+            margin: 0 auto;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            font-size: 20px;
+        }
+
+        input {
+            width: 90%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        input[type="submit"] {
+            background-color: #205E61;
+            color: #fff;
+            cursor: pointer;
+            width: 97%;
+            font-size: 16px;
+        }
+        p{
+            margin: 0 auto;
+            color: #205E61;
+        }
+    </style>
+    <script>
+        var status = '<%- JSON.stringify(status)%>';
+        if (JSON.parse(status) == "verified"){
+                window.location.href = "http://localhost:3000/Register";
+        }
+        else{
+            pass
+        }
+    </script>
+</head>
+<body>
+    <h1>LINVIZ</h1>
+    <h3><%= email%></h3>
+    <h3 style="color: red;"><%= alert%></h3>
+    <form action="" method="post">
+        <p>Password</p> 
+        <input type="password" name="password" id="password" >
+        <br>
+        <p>Confirm Password</p>
+        <input type="password" name="confirm-password" id="confirm-password" >
+        <br>
+        <input type="submit" value="Submit">
+    </form>`
+</body>
+</html>
