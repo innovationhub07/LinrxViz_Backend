@@ -63,13 +63,13 @@ export const forgotPassword = async (req, res) => {
     var transporter = nodemailer.createTransport({
       service: 'gmail',
       auth: {
-        user: 'nithisha2201@gmail.com',
+        user: 'innovationhub07@gmail.com',
         pass: process.env.EMAIL_SECRET
       }
     });
     
     var mailOptions = {
-      from: 'nithisha2201@gmail.com',
+      from: 'innovationhub07@gmail.com',
       to: user.email,
       subject: 'Password Reset',
       text: `Hello,\n\nIt has come to our attention that you may need to reset your password. To assist you with this, simply follow the link below to breeze through the password reset process:\n\n${resetLink}\n\nIf you didn't request this, you can ignore this email.\n\nBest regards,\nThe LINrxVIZ Team`
